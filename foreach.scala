@@ -7,3 +7,5 @@ foreach ($array as $val) {
 */
 
 args.foreach(arg => println(arg))
+//これでも動く
+args.foreach(println)
