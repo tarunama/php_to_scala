@@ -28,7 +28,6 @@ for (
 ) println(file)
 // 重複する計算はfor文内でbindさせる。セミコロンが邪魔なときは{}使う
 val filesHere = (new java.io.File(".")).listFiles
-
 def filelines(file: java.io.File) =
 	scala.io.Source.fromFile(file).getLines().toList
 // ここら辺不安
@@ -41,3 +40,8 @@ def aryFor(args: String) =
 		if fileName.endsWith(".php")
 		if fileName.endsWith(".scala")	
 	} println(file)
+
+// yield 使うと計算結果を記憶してくれるよ
+val ary = Array(1,2,3,4,5)
+for (num <- ary) yield num
+for (num <- ary) yield num * 2 // 本文書くときはここに //
