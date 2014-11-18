@@ -13,3 +13,6 @@ nums.foreach(println)
 // プレースホルダーを使うと
 nums.foreach(println(_))
 
+// 式？全体を担うことも出来る
+nums.foreach(println _)
+nums.filter(_ > 4).foreach(println)
